@@ -1,0 +1,240 @@
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Initialize a new Git repository
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git init
+Reinitialized existing Git repository in /stor/home/abp2558/.git/
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Create a file named file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ echo "Initial content" > file1.txt
+]0;~o Git
+git add file1.txt
+
+# Commit the file
+git commit -m "Add file1.txt"
+
+# Show commit history (for screenshot)
+git log --oneline --graph --all
+]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Add the file to Git
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git add file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Commit the file
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git commit -m "Add file1.txt"
+warning: could not open directory '.zfs/shares/': Stale file handle
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.bash_logout[m
+	[31m.bashrc[m
+	[31m.config/[m
+	[31m.local/[m
+	[31m.profile[m
+	[31m.sh_history[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show commit history (for screenshot)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git log --oneline --graph --all
+[?1h=* [33m382d843[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Add file1.txt[m
+* [33m9e2c1e0[m first commit[m
+[K[?1l>]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Add a new line to file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ echo "This is a new line" >> file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Check the differences
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git diff file1.txt  # Shows the new line in green
+[?1h=[1mdiff --git a/file1.txt b/file1.txt[m[m
+[1mindex 8430408..0b4a395 100644[m[m
+[1m--- a/file1.txt[m[m
+[1m+++ b/file1.txt[m[m
+[36m@@ -1 +1,2 @@[m[m
+ Initial content[m[m
+[32m+[m[32mThis is a new line[m[m
+[K[?1l>]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Stage the change
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git add file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Commit the change
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git commit -m "Add a new line to file1.txt"
+[main ab1a51c] Add a new line to file1.txt
+ Committer: Armaan Pahuja <abp2558@educcomp01.ccbb.utexas.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show the commit history
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git log --oneline --graph --all
+[?1h=* [33mab1a51c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Add a new line to file1.txt[m
+* [33m382d843[m Add file1.txt[m
+* [33m9e2c1e0[m first commit[m
+[K[?1l>]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Revert the last commit
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git revert HEAD --no-edit
+[main 40f1bcc] Revert "Add a new line to file1.txt"
+ Date: Mon Feb 10 22:20:05 2025 -0600
+ Committer: Armaan Pahuja <abp2558@educcomp01.ccbb.utexas.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show commit history after revert
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git log --oneline --graph --all
+[?1h=* [33m40f1bcc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Revert "Add a new line to file1.txt"[m
+* [33mab1a51c[m Add a new line to file1.txt[m
+* [33m382d843[m Add file1.txt[m
+* [33m9e2c1e0[m first commit[m
+[K[?1l>]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Add another different line to file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ echo "Another new line after revert" >> file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Stage and commit the change
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git add file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git commit -m "Add another line after revert"
+[main 75b7e26] Add another line after revert
+ Committer: Armaan Pahuja <abp2558@educcomp01.ccbb.utexas.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show the difference between the reverted state and the new commit
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git diff HEAD~1 HEAD --word-diff=color
+[?1h=[1mdiff --git a/file1.txt b/file1.txt[m[m
+[1mindex 8430408..6bc3fcd 100644[m[m
+[1m--- a/file1.txt[m[m
+[1m+++ b/file1.txt[m[m
+[36m@@ -1 +1,2 @@[m[m
+Initial content[m[m
+[32mAnother new line after revert[m[m
+[K[?1l>]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Modify file1.txt again
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ echo "Yet another modification" >> file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Stage the changes
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git add file1.txt
+]0;~confirm staging)
+git status
+
+# Unstage the changes
+git reset HEAD file1.txt
+
+# Show status again (to confirm un-staging)
+git status
+]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show status (to confirm staging)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git status
+warning: could not open directory '.zfs/shares/': Stale file handle
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   file1.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.bash_logout[m
+	[31m.bashrc[m
+	[31m.config/[m
+	[31m.local/[m
+	[31m.profile[m
+	[31m.sh_history[m
+
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Unstage the changes
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git reset HEAD file1.txt
+Unstaged changes after reset:
+M	file1.txt
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show status again (to confirm un-staging)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git status
+warning: could not open directory '.zfs/shares/': Stale file handle
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   file1.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.bash_logout[m
+	[31m.bashrc[m
+	[31m.config/[m
+	[31m.local/[m
+	[31m.profile[m
+	[31m.sh_history[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Stage and commit changes
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git add file1.txt
+
+
+# Show commit history
+git log --oneline --graph --all
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git commit -m "Make more edits"
+[main 481f246] Make more edits
+ Committer: Armaan Pahuja <abp2558@educcomp01.ccbb.utexas.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Revert the last commit
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git revert HEAD --no-edit
+[main 2fca794] Revert "Make more edits"
+ Date: Mon Feb 10 22:34:00 2025 -0600
+ Committer: Armaan Pahuja <abp2558@educcomp01.ccbb.utexas.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ # Show commit history
+]0;~]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ git log --oneline --graph --all
+[?1h=* [33m2fca794[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Revert "Make more edits"[m
+* [33m481f246[m Make more edits[m
+* [33m75b7e26[m Add another line after revert[m
+* [33m40f1bcc[m Revert "Add a new line to file1.txt"[m
+* [33mab1a51c[m Add a new line to file1.txt[m
+* [33m382d843[m Add file1.txt[m
+* [33m9e2c1e0[m first commit[m
+[K]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ [K]0;abp2558@educcomp01: ~[01;32mabp2558@educcomp01[00m:[01;34m~[00m$ 

@@ -1,0 +1,40 @@
+{
+    "type": [
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        3,
+        0,
+        1,
+        3,
+        0,
+        1,
+        3,
+        0,
+        1,
+        3
+    ],
+    "data": [
+        "\nR version 4.3.1 (2023-06-16) -- \"Beagle Scouts\"\nCopyright (C) 2023 The R Foundation for Statistical Computing\nPlatform: x86_64-pc-linux-gnu (64-bit)\n\nR is free software and comes with ABSOLUTELY NO WARRANTY.\nYou are welcome to redistribute it under certain conditions.\nType 'license()' or 'licence()' for distribution details.\n\n  Natural language support but running in an English locale\n\nR is a collaborative project with many contributors.\nType 'contributors()' for more information and\n'citation()' on how to",
+        " cite R or R packages in publications.\n\nType 'demo()' for some demos, 'help()' for on-line help, or\n'help.start()' for an HTML browser interface to help.\nType 'q()' to quit R.\n\n",
+        "> ",
+        "https://github.com/ArmaanPahuja/assignment-4-exercise-1",
+        "Error: unexpected '/' in \"https:/\"\n",
+        "> ",
+        "https://github.com/ArmaanPahuja/assignment-4-exercise-1.git",
+        "Error: unexpected '/' in \"https:/\"\n",
+        "> ",
+        "git clone https://github.com/ArmaanPahuja/assignment-4-exercise-1.git",
+        "Error: unexpected symbol in \"git clone\"\n",
+        "> ",
+        "https://github.com/ArmaanPahuja/assignment-4-exercise-1.git",
+        "Error: unexpected '/' in \"https:/\"\n",
+        "> ",
+        "git clone https://github.com/ArmaanPahuja/assignment-4-exercise-1.git",
+        "Error: unexpected symbol in \"git clone\"\n"
+    ]
+}
